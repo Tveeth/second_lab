@@ -5,14 +5,12 @@ import 'package:first_app/mocks/delivery_mock.dart';
 
 
 
-class MyHomePage extends StatefulWidget {
-
-
+class SearchPage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => new _MyHomePageState();
+  _SearchPageState createState() => new _SearchPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _SearchPageState extends State<SearchPage> {
   TextEditingController editingController = TextEditingController();
 
   final duplicateItems = DeliveryMock.delivery;
@@ -53,7 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
     return new Scaffold(
       appBar: new AppBar(
         title: Text("Search"),
-
       ),
       body: Container(
         child: Column(

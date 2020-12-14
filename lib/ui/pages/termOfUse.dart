@@ -1,27 +1,27 @@
 import 'package:flutter/material.dart';
 
-class CheckboxOnchangedListener extends StatefulWidget {
+class TermsOfUseCheck extends StatefulWidget {
   @override
-  CheckboxOnchangedListenerState createState() {
-    return new CheckboxOnchangedListenerState();
+  TermsOfUse createState() {
+    return new TermsOfUse();
   }
 }
 
-class CheckboxOnchangedListenerState extends State<CheckboxOnchangedListener> {
+class TermsOfUse extends State<TermsOfUseCheck> {
   bool _isChecked = true;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Onchnaged Checkbox Listener Example"),
+        title: Text("Terms of use"),
       ),
       body: Column(
         children: <Widget>[
           Expanded(
             child: Center(
               child:
-              Text(_isChecked ? "Кирилл " : "Андрюха ",
+              Text(_isChecked ? "You agree with the terms of use." : "You don't agree with the terms of use.",
                   style: TextStyle(
                     fontSize: 20.0,
                     fontWeight: FontWeight.bold,
@@ -34,7 +34,8 @@ class CheckboxOnchangedListenerState extends State<CheckboxOnchangedListener> {
                 child: Column(
                   children: [
                     CheckboxListTile(
-                      title: Text("Checkbox Text"),
+                      title:
+                      _buildText(),
                       value: _isChecked,
                       onChanged: (val) {
                         setState(() {
@@ -49,4 +50,12 @@ class CheckboxOnchangedListenerState extends State<CheckboxOnchangedListener> {
       ),
     );
   }
+}
+
+Widget _buildText() {
+  return Text("Using the functionality of the Application is possible only "
+      "if the User agrees with the offers of the Copyright Holder.", style: TextStyle(
+    fontSize: 20.0,
+    color: Colors.grey,
+  ),);
 }

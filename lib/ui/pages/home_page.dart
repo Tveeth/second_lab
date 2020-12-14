@@ -23,7 +23,7 @@ class _HomePageState extends State<HomePage> {
         leading: IconButton(
           icon: Icon(Icons.info),
           onPressed: () {
-            Navigator.push(context, MaterialPageRoute(builder: (context) => CheckboxOnchangedListener()));
+            Navigator.push(context, MaterialPageRoute(builder: (context) => TermsOfUseCheck()));
           },
         ),
         title: Text(AppStrings.homePageTitle),
@@ -31,9 +31,9 @@ class _HomePageState extends State<HomePage> {
           Padding(
               padding: EdgeInsets.only(right: 20.0),
           child: IconButton(
-            icon: Icon(Icons.info),
+            icon: Icon(Icons.search),
             onPressed: () {
-              Navigator.push(context, MaterialPageRoute(builder: (context) => MyHomePage()));
+              Navigator.push(context, MaterialPageRoute(builder: (context) => SearchPage()));
               },
           ),)
         ],
