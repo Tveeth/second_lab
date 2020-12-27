@@ -2,6 +2,7 @@ import 'package:first_app/mocks/delivery_mock.dart';
 import 'package:first_app/models/delivery.dart';
 import 'package:first_app/resources/app_image_assets.dart';
 import 'package:first_app/resources/app_strings.dart';
+import 'package:first_app/ui/pages/todos_home_page.dart';
 import 'package:first_app/ui/views/delivery_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:first_app/ui/pages/termOfUse.dart';
@@ -47,6 +48,15 @@ class _HomePageState extends State<HomePage> {
               .toList(),
         ),
 
+
+      ),
+      floatingActionButton:FloatingActionButton(
+    child:Icon(Icons.android),
+    onPressed: (){
+    Navigator.push(context, MaterialPageRoute(builder: (context) =>  TodosHomePage(),
+    ),
+    );
+    },
       ),
     );
   }
